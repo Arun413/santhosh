@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - b
+      - a
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
 
     - name: Check Branch
       run: |
-        if [[ ${{ github.ref }} == 'refs/heads/b' ]]; then
+        if [[ ${{ github.ref }} == 'refs/heads/a' ]]; then
           echo "Updating 'b' branch. Add your custom steps here."
           # Add your custom steps for the 'b' branch here
         else
