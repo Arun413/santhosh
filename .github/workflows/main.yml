@@ -5,14 +5,21 @@ on:
     branches:
       - master
       - b
- 
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
     - name: Check Branch
-      run: git branch --all
-        
+      run: |
+        if [[ ${{ github.ref }} == 'refs/heads/b' ]]; then
+          echo "Updating 'b' branch. Add your custom steps here."
+          # Add your custom steps for the 'b' branch here
+        else
+          echo "Updating branch other than 'b'. Add general steps here."
+          # Add general steps for other branches here
+        fi
