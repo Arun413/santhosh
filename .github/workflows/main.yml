@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - a
+      - b
 
 jobs:
   build:
