@@ -1,11 +1,11 @@
 name: Multibranch
 
 on:
-  push:
-    branches:
-      - master
-      - a
-      - b
+   push:
+  #   branches:
+      # - master
+      # - a
+      # - b
 
 jobs:
   build:
